@@ -1,0 +1,30 @@
+/* bugSolution.css */
+
+/* Correcting the width issue */
+.container {
+  width: 500px; /* Explicitly defining the parent width */
+}
+
+.element {
+  width: calc(100% - 10px);
+}
+
+/* Correcting unit mismatches */
+.anotherElement {
+  width: calc(100px + 50px); /* Using consistent units */
+}
+
+/* Alternative approach: Use variables for better readability and maintainability */
+:root {
+  --element-width: 100px;
+  --margin: 10px;
+}
+
+.element2 {
+  width: calc(var(--element-width) - var(--margin));
+}
+
+/* Or use `rem` for better responsiveness  */
+.element3 {
+  width: calc(10rem - 1rem);
+}
